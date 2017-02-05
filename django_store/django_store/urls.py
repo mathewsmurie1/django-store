@@ -5,10 +5,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     # Examples:
-    # url(r'^$', 'django_store.views.home', name='home'),
+    # url(r'^$', 'django_store.views.product', name='product'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^cart/', include('cart.urls', namespace='cart')),
     url(r'^', include('store.urls', namespace='store')),
 ]
 if settings.DEBUG:
